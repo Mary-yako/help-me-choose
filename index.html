@@ -6,13 +6,26 @@
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1> help me choose between ... </h1>
+    <h1> Help me choose between ... </h1>
     <div class="inputSection">
       <div class="inputs">
-        <input placeholder="something" > </input>
+        <input placeholder="Something" > </input>
       </div>
+    <div class="resultsection"> </div>
     <button class="addoption"> Add </botton>
     </div>
-    <button> Go </button>
+    <button> Go! </button>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+    <script>
+      $(function() {
+        $('.resultsection').hide()
+
+        var add_option = function() {
+          $('.inputs').append('<input></input>')
+        }
+
+        $('.addoption').click(add_option)
+      })
+    </script>
   </body>
 </html>
