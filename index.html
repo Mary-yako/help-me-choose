@@ -25,6 +25,19 @@
         }
 
         $('.addoption').click(add_option)
+
+
+        var options = []
+        var submit= function() {
+          $('.inputSection').hide()
+          $('.resultsection').css('display', 'flex')
+          $(.'input').each(functions() {
+            options.push($(this).val())
+          })
+          var winner= options[math.floor(math.random()*options.length)]
+          $('resultsection').text(winner)
+        }
+        $('.submit').click(submit)
       })
     </script>
   </body>
